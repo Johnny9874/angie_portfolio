@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Angie Atelier
 
-## Getting Started
+Site vitrine pour un designer d'intérieur construit avec Next.js, React, Tailwind CSS et TypeScript.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+| Technologie | Version |
+| --- | --- |
+| Next.js | 16.2.5 |
+| React | 19.2.4 |
+| React DOM | 19.2.4 |
+| Tailwind CSS | ^4 |
+| @tailwindcss/postcss | ^4 |
+| TypeScript | ^5 |
+| ESLint | ^9 |
+| eslint-config-next | 16.2.5 |
+| @types/node | ^20 |
+| @types/react | ^19 |
+| @types/react-dom | ^19 |
+| pnpm | 10.33.4 |
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Architecture
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `/` redirige vers `/accueil`.
+- Les 5 pages vitrines sont `/accueil`, `/services`, `/projets`, `/about`, `/contact`.
+- Le layout global et la navigation partagée vivent dans `app/layout.tsx` et `app/components/site-shell.tsx`.
+- Les contenus réutilisables sont centralisés dans `app/lib/site-data.ts`.
+- Le formulaire de contact utilise un composant client minimal avec ouverture de messagerie.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Palette
 
-## Learn More
+Les couleurs globales sont définies dans `app/globals.css`.
 
-To learn more about Next.js, take a look at the following resources:
+| Rôle | Hex / valeur |
+| --- | --- |
+| Background | `#f6f0e7` |
+| Foreground | `#1b1510` |
+| Surface | `#fffaf4` |
+| Surface strong | `#f0e6d9` |
+| Muted | `#6f655b` |
+| Border | `rgba(27, 21, 16, 0.12)` |
+| Accent | `#9a734d` |
+| Accent strong | `#6f4d31` |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Typographies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Titre: `Cormorant Garamond`
+- Texte courant: `Manrope`
 
-## Deploy on Vercel
+## Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `pnpm dev` lance le serveur de développement.
+- `pnpm lint` vérifie la qualité du code.
+- `pnpm build` génère la version de production.
+- `pnpm start` lance l'application compilée.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Choix de conception
+
+- Structure simple et réutilisable pour rester scalable.
+- Contenu centralisé pour éviter les doublons.
+- Métadonnées SEO présentes sur chaque page.
+- Layout léger, statique et performant par défaut.
