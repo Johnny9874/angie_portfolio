@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${manrope.variable} ${cormorant.variable} h-full scroll-smooth antialiased`}
+      className={`${manrope.variable} ${cormorant.variable} h-full data-scroll-behavior="smooth" antialiased`}
     >
       <body className="min-h-full bg-background text-foreground">
         {/* Shared shell handles navigation, footer, and the editorial background. */}
