@@ -48,9 +48,8 @@ export const navigation: NavigationItem[] = [
 
 // Small proof points for the hero section.
 export const heroStats = [
-  { label: "Projets livrés", value: "48" },
-  { label: "Années d'expérience", value: "12" },
-  { label: "Villes accompagnées", value: "8" },
+  { label: "Projets livrés", value: "4" },
+  { label: "Année d'expérience", value: "1" },
 ];
 
 // Services are kept in a single source so the home page and services page stay aligned.
